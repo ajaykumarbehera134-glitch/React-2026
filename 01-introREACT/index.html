@@ -7,5 +7,21 @@
 </head>
 <body>
     <div id="root"></div>
+
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        const h1 = React.createElement('h1', null, 'Learning React');
+        // console.log(h1);
+        const p = React.createElement('p', null, 'This is a paragraph');
+        const button = React.createElement('button', { onClick: () => alert('React has been clicked !! Boom !!') }, 'Click Me');
+        const div = React.createElement('div', null, [h1, p, button]);
+        // console.log(p);
+        // root.render(h1);
+        // root.render([h1, p]);
+        root.render(div);
+    </script>
 </body>
 </html>
